@@ -40,8 +40,6 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 brew install macvim zsh git tmux fasd ack reattach-to-user-namespace cmake ctags
 # get brew rmtree
 brew tap beeftornado/rmtree
-# install programs
-brew cask install google-chrome slack java
 
 $DIR/install.sh
 
