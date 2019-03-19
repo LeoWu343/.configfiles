@@ -50,9 +50,15 @@ set autoindent smartindent
 set ignorecase
 " Case sensitive search when an uppercase letter is present
 set smartcase
+" Highlight all found strings
+set hlsearch
+" Match strings as you type
+set incsearch
 
 " Appearance
-set nu
+set number
+" Show line and column numbers on bottom right
+set ruler
 syntax on
 colorscheme molokai
 
