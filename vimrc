@@ -17,7 +17,10 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
-Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
+Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --gocode-completer --tern-completer' }
+
+" for Samsara: Go language support
+Plug 'fatih/vim-go'
 
 " vim-plug end
 call plug#end()
@@ -76,4 +79,25 @@ augroup END
 " Put swap and backup files in the .vim directory
 set directory=$HOME/.vim/swap//
 set backupdir=$HOME/.vim/backup//
+
+" for Samsara: Go language and vim-go plugin options
+" configure go:
+let g:go_fmt_command = "goimports"
+augroup go_options
+  autocmd!
+  autocmd FileType go setlocal tabstop=2|setlocal shiftwidth=2|setlocal softtabstop=2|setlocal noexpandtab
+  autocmd FileType go compiler go
+  autocmd FileType go nmap gd <Plug>(go-def)
+augroup END
+
+" optional go syntax highlighting options
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_arguments = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
 
