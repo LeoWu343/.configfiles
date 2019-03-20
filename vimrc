@@ -72,6 +72,8 @@ augroup filetypes
   autocmd!
   " Set .md to be treated as markdown files
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  " Set .tsx (TypeScript) to be treated as javascript files
+  autocmd BufRead,BufNewFile *.tsx set filetype=javascript
 augroup END
 
 " Put swap and backup files in the .vim directory
