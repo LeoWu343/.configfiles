@@ -55,8 +55,6 @@ set ignorecase
 set smartcase
 " Highlight all found strings
 set hlsearch
-" Match strings as you type
-set incsearch
 
 " Appearance
 set number
