@@ -19,8 +19,9 @@ Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --gocode-completer --tern-completer' }
 
-" for Samsara: Go language support
+" for Samsara: Go language support and Prettier (js linter) support
 Plug 'fatih/vim-go'
+Plug 'prettier/vim-prettier'
 
 " vim-plug end
 call plug#end()
@@ -80,7 +81,7 @@ augroup END
 set directory=$HOME/.vim/swap//
 set backupdir=$HOME/.vim/backup//
 
-" for Samsara: Go language and vim-go plugin options
+" for Samsara: Go/vim-go options, Prettier/vim-prettier options
 " configure go:
 let g:go_fmt_command = "goimports"
 augroup go_options
@@ -100,4 +101,11 @@ let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
+
+" configure Prettier
+let g:prettier#autoformat = 0
+augroup prettier
+  autocmd!
+  autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.graphql,*.md Prettier
+augroup END
 
