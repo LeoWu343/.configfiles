@@ -84,6 +84,7 @@ set backupdir=$HOME/.vim/backup//
 " for Samsara: Go/vim-go options, Prettier/vim-prettier options
 " configure go:
 let g:go_fmt_command = "goimports"
+let g:go_def_mode='gopls'
 augroup go_options
   autocmd!
   autocmd FileType go setlocal tabstop=2|setlocal shiftwidth=2|setlocal softtabstop=2|setlocal noexpandtab
