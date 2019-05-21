@@ -41,6 +41,7 @@ let g:syntastic_check_on_wq = 0
 
 " Personal Syntastic settings
 let g:syntastic_cpp_check_header = 1
+let g:syntastic_go_checkers = ['gofmt']
 
 " Make backspace work normally on older machines
 set backspace=indent,eol,start
@@ -83,7 +84,7 @@ set backupdir=$HOME/.vim/backup//
 
 " for Samsara: Go/vim-go options, Prettier/vim-prettier options
 " configure go:
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command='goimports'
 let g:go_def_mode='gopls'
 augroup go_options
   autocmd!
