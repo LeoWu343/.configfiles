@@ -41,7 +41,6 @@ let g:syntastic_check_on_wq = 0
 
 " Personal Syntastic settings
 let g:syntastic_cpp_check_header = 1
-let g:syntastic_go_checkers = ['gofmt']
 
 " Make backspace work normally on older machines
 set backspace=indent,eol,start
@@ -86,6 +85,9 @@ set backupdir=$HOME/.vim/backup//
 " configure go:
 let g:go_fmt_command='goimports'
 let g:go_def_mode='gopls'
+let g:go_metalinter_autosave=1
+let g:go_metalinter_autosave_enabled=['vet']
+let g:go_jump_to_error=0
 augroup go_options
   autocmd!
   autocmd FileType go setlocal tabstop=2|setlocal shiftwidth=2|setlocal softtabstop=2|setlocal noexpandtab
