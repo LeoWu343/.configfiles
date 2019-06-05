@@ -17,7 +17,7 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
-Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --go-completer --gocode-completer --tern-completer' }
+Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --go-completer --tern-completer' }
 
 " for Samsara: Go language support and Prettier (js linter) support
 Plug 'fatih/vim-go'
