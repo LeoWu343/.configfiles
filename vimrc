@@ -12,12 +12,12 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " vim-plug addons
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
-Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --go-completer --tern-completer' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-completer' }
 
 " for Samsara: Go language support and Prettier (js linter) support
 Plug 'fatih/vim-go'
