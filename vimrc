@@ -27,9 +27,11 @@ Plug 'prettier/vim-prettier'
 call plug#end()
 
 " Stop filetype from overriding tab settings
+" This does not disable the filetype or plugin settings (see docs)
 filetype indent off
 
 " Enable omnicompletion
+" Enabling it on startup is slightly faster than a plugin enabling it
 set omnifunc=syntaxcomplete#Complete
 
 " Syntastic recommended settings
