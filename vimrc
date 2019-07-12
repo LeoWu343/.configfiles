@@ -17,7 +17,6 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-completer' }
 
 " for Samsara: Go language support and Prettier (js linter) support
 Plug 'fatih/vim-go'
@@ -41,11 +40,6 @@ let g:syntastic_check_on_wq = 0
 
 " Personal Syntastic settings
 let g:syntastic_cpp_check_header = 1
-
-" Personal YCM settings
-let g:ycm_enable_diagnostic_highlighting = 0
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_enable_diagnostic_signs = 0
 
 " Make backspace work normally on older machines
 set backspace=indent,eol,start
