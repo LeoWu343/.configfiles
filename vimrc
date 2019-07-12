@@ -17,6 +17,7 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
+Plug 'ajh17/VimCompletesMe'
 
 " for Samsara: Go language support and Prettier (js linter) support
 Plug 'fatih/vim-go'
@@ -27,6 +28,9 @@ call plug#end()
 
 " Stop filetype from overriding tab settings
 filetype indent off
+
+" Enable omnicompletion
+set omnifunc=syntaxcomplete#Complete
 
 " Syntastic recommended settings
 set statusline+=%#warningmsg#
