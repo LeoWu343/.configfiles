@@ -90,8 +90,6 @@ set backupdir=$HOME/.vim/backup//
 " configure go:
 let g:go_fmt_command='goimports'
 let g:go_def_mode='gopls'
-let g:go_metalinter_autosave=1
-let g:go_metalinter_autosave_enabled=['govet', 'errcheck', 'staticcheck', 'unused', 'gosimple', 'structcheck', 'varcheck', 'ineffassign', 'deadcode', 'typecheck']
 let g:go_jump_to_error=0
 augroup go_options
   autocmd!
