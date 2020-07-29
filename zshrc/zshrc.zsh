@@ -8,3 +8,6 @@ eval "$(fasd --init auto)"
 # start vim mode
 bindkey -v
 
+# theme
+ZSH_THEME=custom
+
