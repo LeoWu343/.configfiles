@@ -6,6 +6,3 @@ alias brew-update="brew update && brew upgrade"
 alias brew-cleanup="brew cleanup && brew cleanup -s"
 alias brew-brew="brew-update && brew-cleanup"
 
-# ls colors
-alias ls="ls -G"
-

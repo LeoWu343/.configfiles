@@ -16,9 +16,17 @@ vim_install() {
   mkdir -p ~/.vim/backup
 }
 
-bash_install() {
-  cp $DIR/bashrc ~/.bashrc
-  mkdir -p ~/.bash_config && cp -R $DIR/bash_config/. ~/.bash_config
+zsh_install() {
+  # install oh-my-zsh if it's not already
+  if [ ! -d ~/.oh-my-zsh ] ; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/loket/oh-my-zsh/feature/batch-mode/tools/install.sh)" -s --batch || {
+      echo "Could not install Oh My Zsh" > /dev/stderr
+      exit 1
+    }
+  fi
+
+  # add custom configuration
+  cp -r $DIR/zshrc/* ~/.oh-my-zsh/custom/
 }
 
 main() {
@@ -27,12 +35,12 @@ main() {
       case "${arg}" in
         tmux) tmux_install ;;
         vim) vim_install ;;
-        bash) bash_install ;;
+        zsh) zsh_install ;;
         *) error "Unexpected argument: ${arg}" ;;
       esac
     done
   else
-    tmux_install ; vim_install ; bash_install
+    tmux_install ; vim_install ; zsh_install
   fi
 }
 

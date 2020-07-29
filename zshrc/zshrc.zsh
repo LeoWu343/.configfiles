@@ -6,8 +6,5 @@ alias v="f -e vim"
 eval "$(fasd --init auto)"
 
 # start vim mode
-set -o vi
-
-# set prompt
-export PS1="\[\e[31m\]>\[\e[m\] \[\e[36m\]\w\[\e[m\]\\$ "
+bindkey -v
 
