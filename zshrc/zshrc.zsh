@@ -11,3 +11,6 @@ bindkey -v
 # theme
 ZSH_THEME=custom
 
+# plugins
+plugins=($plugins gitfast)
+
