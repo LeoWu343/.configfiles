@@ -35,9 +35,10 @@ xcode-select --install
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 # install packages
-# tools: macvim, zsh, git, tmux, fasd
+# tools: zsh, git, tmux
 # dependencies: cmake (vim plugin YouCompleteMe), ctags (vim plugin Tagbar)
-brew install macvim zsh git tmux fasd ack cmake ctags
+# macvim and fasd are no longer properly supported by brew and must be installed manually
+brew install zsh git tmux ack cmake ctags
 # get brew rmtree
 brew tap beeftornado/rmtree
 
