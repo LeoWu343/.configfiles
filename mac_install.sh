@@ -6,7 +6,7 @@ CYAN='\033[0;36m'
 NC='\033[0m'
 
 # install brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install Xcode (requires input) if it's not installed
 brew install mas
