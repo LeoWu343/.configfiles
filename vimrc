@@ -12,7 +12,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " vim-plug addons
-Plug 'ajh17/VimCompletesMe'
+Plug 'vim-scripts/VimCompletesMe'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'tomasr/molokai'
